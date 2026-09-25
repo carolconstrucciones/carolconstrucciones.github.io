@@ -284,7 +284,54 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 8px;
-        }
+       /* INGENIERÍA */
+
+.engineering-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.engineering-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.engineering-services {
+    padding-left: 20px;
+    border-left: 1px solid #20bdb6;
+}
+
+.engineering-services h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.engineering-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.engineering-services li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 20px;
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.engineering-services li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #20bdb6;
+    font-size: 24px;
+    line-height: 1;
+ }
 
         .gallery-grid img {
             width: 100%;
@@ -513,7 +560,19 @@
             .about img {
                 height: 350px;
             }
+.engineering-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
 
+.engineering-services {
+    padding-left: 0;
+    border-left: none;
+}
+
+.engineering-services h3 {
+    font-size: 24px;
+}
           .team-grid {
     grid-template-columns: 1fr;
 }
@@ -737,19 +796,28 @@
     </div>
 
 
-    <div class="gallery-grid">
+    <div class="engineering-content">
 
-        <img src="images/Modelo-estructural-05.png" alt="Modelo estructural">
-        <img src="images/Modelo-estructural-06.png" alt="Modelo estructural">
-        <img src="images/Modelo-estructural-07.png" alt="Modelo estructural">
-        <img src="images/Modelo-estructural-08.png" alt="Modelo estructural">
+    <div class="engineering-image">
+        <img src="images/Modelo-estructural-05.png" alt="Proyecto de ingeniería estructural">
+    </div>
 
-        <img src="images/Modelo-estructural-09.png" alt="Modelo estructural">
-        <img src="images/Modelo-estructural-10.png" alt="Modelo estructural">
-        <img src="images/Modelo-estructural-11.png" alt="Modelo estructural">
-        <img src="images/Modelo-estructural-12.png" alt="Modelo estructural">
+    <div class="engineering-services">
+
+        <h3>Ofrecemos servicios especializados en:</h3>
+
+        <ul>
+            <li>Detallado de edificios de acero estructural.</li>
+            <li>Elaboración de planos de taller y montaje de estructuras metálicas.</li>
+            <li>Despiece de materiales en estructuras metálicas para optimizar recursos y reducir costos.</li>
+            <li>Planos de estructuras de hormigón armado.</li>
+            <li>Galpones o naves industriales.</li>
+            <li>Consultorías geotécnicas y estudio de suelos.</li>
+        </ul>
 
     </div>
+
+</div>
 
 </section>
 
