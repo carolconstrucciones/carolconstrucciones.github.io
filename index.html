@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Carol Construcciones | Ingeniería Civil</title>
+    <title>Carol Construcciones | Ingeniería y Construcción</title>
 
-    <meta name="description" content="Carol Construcciones - Ingeniería Civil y Estructural. Cálculo, diseño y asesoramiento de estructuras y obras civiles.">
+    <meta name="description" content="Carol Construcciones. Proyectos de ingeniería estructural, geotécnica e infraestructura. Ingeniería y construcción.">
 
     <style>
         * {
@@ -15,139 +15,474 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #171717;
+            background: #fff;
             line-height: 1.6;
         }
 
+        /* CABECERA */
+
         header {
-            background: #17212b;
-            color: white;
-            padding: 25px 8%;
+            height: 92px;
+            padding: 0 7%;
+            background: #fff;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #e7e7e7;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        header h1 {
-            font-size: 24px;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: #111;
+        }
+
+        .brand img {
+            width: 76px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .brand-text strong {
+            display: block;
+            font-size: 19px;
             letter-spacing: 1px;
         }
 
+        .brand-text span {
+            display: block;
+            color: #777;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-top: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
         nav a {
-            color: white;
+            color: #222;
             text-decoration: none;
-            margin-left: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #18b8b2;
         }
 
+        /* PORTADA */
+
         .hero {
-            min-height: 70vh;
+            min-height: 78vh;
+            position: relative;
             display: flex;
-            align-items: center;
-            padding: 70px 8%;
-            background: #eef1f4;
+            align-items: flex-end;
+            padding: 8% 7%;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.76),
+                    rgba(0,0,0,.25)
+                ),
+                url("images/Modelo-estructural-00.png") center/cover no-repeat;
+            color: white;
         }
 
         .hero-content {
-            max-width: 700px;
+            max-width: 850px;
         }
 
-        .hero h2 {
-            font-size: 48px;
-            line-height: 1.15;
-            margin-bottom: 20px;
+        .eyebrow {
+            color: #27d0c8;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 6vw, 82px);
+            line-height: .98;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
         }
 
         .hero p {
-            font-size: 21px;
-            margin-bottom: 30px;
-            color: #555;
+            max-width: 650px;
+            font-size: 20px;
+            color: #e7e7e7;
+            margin-bottom: 35px;
         }
 
         .button {
             display: inline-block;
-            background: #17212b;
-            color: white;
-            padding: 14px 25px;
+            background: #20bdb6;
+            color: #fff;
+            padding: 15px 25px;
             text-decoration: none;
-            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: .2s;
         }
 
         .button:hover {
-            background: #2d3d4b;
+            background: #159d98;
         }
+
+        /* GENERAL */
 
         section {
-            padding: 70px 8%;
+            padding: 100px 7%;
         }
 
-        section h2 {
-            font-size: 32px;
-            margin-bottom: 35px;
-            text-align: center;
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 55px;
         }
 
-        .services {
+        .section-number {
+            color: #20bdb6;
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .section-heading p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        /* AREAS */
+
+        .areas {
+            background: #f5f6f6;
+        }
+
+        .areas-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            border-top: 1px solid #ccc;
         }
 
-        .service {
-            border: 1px solid #ddd;
+        .area {
+            padding: 42px 35px 42px 0;
+            border-right: 1px solid #ccc;
+            margin-right: 35px;
+        }
+
+        .area:last-child {
+            border-right: none;
+        }
+
+        .area-number {
+            color: #20bdb6;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 45px;
+        }
+
+        .area h3 {
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .area p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* PROYECTOS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .project {
+            height: 420px;
+            position: relative;
+            overflow: hidden;
+            background: #ddd;
+        }
+
+        .project img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .project:hover img {
+            transform: scale(1.035);
+        }
+
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                transparent 45%,
+                rgba(0,0,0,.80)
+            );
+            display: flex;
+            align-items: flex-end;
             padding: 30px;
-            background: white;
+            color: white;
         }
 
-        .service h3 {
-            margin-bottom: 15px;
-            font-size: 21px;
+        .project-overlay span {
+            color: #27d0c8;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
+
+        .project-overlay h3 {
+            font-size: 24px;
+            margin-top: 4px;
+        }
+
+        /* GALERIA */
+
+        .gallery {
+            background: #111;
+            color: white;
+        }
+
+        .gallery .section-heading p {
+            color: #aaa;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            opacity: .9;
+            transition: .25s;
+        }
+
+        .gallery-grid img:hover {
+            opacity: 1;
+            transform: scale(1.015);
+        }
+
+        /* NOSOTROS */
 
         .about {
-            background: #f5f5f5;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
         }
 
-        .about-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
+        .about img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
         }
+
+        .about-text h2 {
+            font-size: clamp(34px, 4vw, 50px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: #606060;
+            margin-bottom: 18px;
+            font-size: 17px;
+        }
+
+        /* CONTACTO */
 
         .contact {
-            text-align: center;
+            background: #20bdb6;
+            color: white;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
+
+        .contact h2 {
+            font-size: clamp(40px, 5vw, 66px);
+            line-height: 1;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,.5);
+            padding: 13px 0;
+            font-size: 17px;
+        }
+
+        .contact-links a:hover {
+            border-color: white;
+        }
+
+        /* FOOTER */
 
         footer {
-            background: #17212b;
-            color: white;
-            text-align: center;
-            padding: 25px;
+            background: #0d0d0d;
+            color: #aaa;
+            padding: 38px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
         }
 
-        @media (max-width: 800px) {
+        /* WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 999;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.25);
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 850px) {
 
             header {
-                flex-direction: column;
-                gap: 15px;
+                height: auto;
+                padding: 15px 5%;
             }
 
-            nav a {
-                margin: 0 8px;
+            .brand img {
+                width: 58px;
+                height: 50px;
             }
 
-            .hero h2 {
-                font-size: 36px;
+            .brand-text strong {
+                font-size: 14px;
             }
 
-            .services {
+            .brand-text span {
+                display: none;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 72vh;
+                padding: 80px 6% 55px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .areas-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .area {
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                margin: 0;
+                padding: 30px 0;
+            }
+
+            .area-number {
+                margin-bottom: 20px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                height: 330px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid img {
+                height: 160px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about img {
+                height: 350px;
+            }
+
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 8px;
             }
         }
     </style>
@@ -155,136 +490,306 @@
 
 <body>
 
-    <header>
+<header>
 
-        <h1>CAROL CONSTRUCCIONES</h1>
+    <a href="#" class="brand">
+        <img src="images/logo-carol.jpeg" alt="Logo Carol Construcciones">
 
-        <nav>
-            <a href="#servicios">Servicios</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <div class="brand-text">
+            <strong>CAROL CONSTRUCCIONES</strong>
+            <span>INGENIERÍA · PROYECTOS · CONSTRUCCIÓN</span>
+        </div>
+    </a>
 
-    </header>
+    <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#nosotros">Estudio</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+</header>
 
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <h2>Ingeniería Civil y Estructural</h2>
-
-            <p>
-                Cálculo, diseño y asesoramiento para proyectos de ingeniería y construcción.
-            </p>
-
-            <a href="#contacto" class="button">
-                Solicitar presupuesto
-            </a>
-
+        <div class="eyebrow">
+            Ingeniería · Proyectos · Construcción
         </div>
 
-    </section>
-
-
-    <section id="servicios">
-
-        <h2>Servicios</h2>
-
-        <div class="services">
-
-            <div class="service">
-                <h3>Estructuras de Hormigón</h3>
-                <p>
-                    Cálculo y diseño de estructuras de hormigón armado y elementos estructurales.
-                </p>
-            </div>
-
-            <div class="service">
-                <h3>Estructuras Metálicas</h3>
-                <p>
-                    Diseño y verificación de estructuras metálicas, cubiertas y naves industriales.
-                </p>
-            </div>
-
-            <div class="service">
-                <h3>Estructuras de Madera</h3>
-                <p>
-                    Análisis y diseño de estructuras de madera y sus elementos resistentes.
-                </p>
-            </div>
-
-            <div class="service">
-                <h3>Fundaciones</h3>
-                <p>
-                    Análisis y diseño de fundaciones y soluciones para diferentes condiciones de suelo.
-                </p>
-            </div>
-
-            <div class="service">
-                <h3>Obras Civiles</h3>
-                <p>
-                    Ingeniería aplicada a puentes, obras hidráulicas y diferentes proyectos civiles.
-                </p>
-            </div>
-
-            <div class="service">
-                <h3>Verificación Estructural</h3>
-                <p>
-                    Evaluación y verificación de estructuras existentes y propuestas de refuerzo.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section id="nosotros" class="about">
-
-        <div class="about-content">
-
-            <h2>Sobre Carol Construcciones</h2>
-
-            <p>
-                Somos un estudio de ingeniería dedicado al cálculo, diseño y
-                asesoramiento de estructuras y obras civiles.
-            </p>
-
-            <br>
-
-            <p>
-                Trabajamos en proyectos de hormigón armado, estructuras metálicas,
-                madera, fundaciones y diferentes tipos de obras civiles.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section id="contacto" class="contact">
-
-        <h2>¿Tenés un proyecto?</h2>
+        <h1>
+            Ingeniería para<br>
+            construir.
+        </h1>
 
         <p>
-            Contactanos para analizar tu proyecto y solicitar un presupuesto.
+            Desarrollo de proyectos estructurales, geotécnicos y de
+            infraestructura, complementados con ejecución de obras civiles.
         </p>
 
-        <br>
-
-        <a href="mailto:tuemail@email.com" class="button">
-            Contactar
+        <a href="#proyectos" class="button">
+            Ver proyectos
         </a>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <footer>
+<section id="servicios" class="areas">
 
-        <p>© 2026 Carol Construcciones - Ingeniería Civil</p>
+    <div class="section-heading">
 
-    </footer>
+        <div class="section-number">01 / SERVICIOS</div>
+
+        <h2>
+            Ingeniería aplicada a proyectos reales.
+        </h2>
+
+        <p>
+            Abordamos cada proyecto integrando análisis, diseño,
+            documentación técnica y criterios constructivos.
+        </p>
+
+    </div>
+
+
+    <div class="areas-grid">
+
+        <article class="area">
+
+            <div class="area-number">01</div>
+
+            <h3>Ingeniería estructural</h3>
+
+            <p>
+                Diseño y cálculo de estructuras de hormigón armado,
+                acero y madera. Edificios, naves industriales,
+                puentes y estructuras especiales.
+            </p>
+
+        </article>
+
+
+        <article class="area">
+
+            <div class="area-number">02</div>
+
+            <h3>Geotecnia</h3>
+
+            <p>
+                Diseño de fundaciones, análisis de interacción
+                suelo-estructura y soluciones de cimentación
+                adaptadas a las condiciones de cada proyecto.
+            </p>
+
+        </article>
+
+
+        <article class="area">
+
+            <div class="area-number">03</div>
+
+            <h3>Infraestructura</h3>
+
+            <p>
+                Desarrollo de proyectos y soluciones para obras
+                civiles, hidráulicas, saneamiento e infraestructura.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section id="proyectos">
+
+    <div class="section-heading">
+
+        <div class="section-number">02 / PROYECTOS</div>
+
+        <h2>Proyectos seleccionados.</h2>
+
+        <p>
+            Una selección de trabajos de ingeniería desarrollados
+            para edificaciones, industria e infraestructura.
+        </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+        <article class="project">
+            <img src="images/Modelo-estructural-01.png" alt="Proyecto estructural">
+
+            <div class="project-overlay">
+                <div>
+                    <span>Ingeniería estructural</span>
+                    <h3>Edificios y estructuras</h3>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="project">
+            <img src="images/Modelo-estructural-02.png" alt="Proyecto de ingeniería">
+
+            <div class="project-overlay">
+                <div>
+                    <span>Ingeniería</span>
+                    <h3>Estructuras especiales</h3>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="project">
+            <img src="images/Modelo-estructural-03.png" alt="Proyecto industrial">
+
+            <div class="project-overlay">
+                <div>
+                    <span>Industria</span>
+                    <h3>Estructuras industriales</h3>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="project">
+            <img src="images/Modelo-estructural-04.png" alt="Proyecto de infraestructura">
+
+            <div class="project-overlay">
+                <div>
+                    <span>Infraestructura</span>
+                    <h3>Obras civiles</h3>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="gallery">
+
+    <div class="section-heading">
+
+        <div class="section-number">03 / INGENIERÍA</div>
+
+        <h2>Diseño, análisis y documentación.</h2>
+
+        <p>
+            Modelación estructural y desarrollo técnico de
+            soluciones de ingeniería.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <img src="images/Modelo-estructural-05.png" alt="Modelo estructural">
+        <img src="images/Modelo-estructural-06.png" alt="Modelo estructural">
+        <img src="images/Modelo-estructural-07.png" alt="Modelo estructural">
+        <img src="images/Modelo-estructural-08.png" alt="Modelo estructural">
+
+        <img src="images/Modelo-estructural-09.png" alt="Modelo estructural">
+        <img src="images/Modelo-estructural-10.png" alt="Modelo estructural">
+        <img src="images/Modelo-estructural-11.png" alt="Modelo estructural">
+        <img src="images/Modelo-estructural-12.png" alt="Modelo estructural">
+
+    </div>
+
+</section>
+
+
+<section id="nosotros" class="about">
+
+    <img src="images/Modelo-estructural-13.png" alt="Ingeniería Carol Construcciones">
+
+
+    <div class="about-text">
+
+        <div class="section-number">04 / ESTUDIO</div>
+
+        <h2>Carol Construcciones</h2>
+
+        <p>
+            Estudio de ingeniería orientado al desarrollo de proyectos
+            estructurales, geotécnicos y de infraestructura.
+        </p>
+
+        <p>
+            Combinamos ingeniería, modelación y documentación técnica
+            con experiencia vinculada a la ejecución de obras civiles.
+        </p>
+
+        <p>
+            Esta integración permite desarrollar soluciones considerando
+            tanto el comportamiento estructural como su materialización
+            en obra.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="contacto" class="contact">
+
+    <div>
+        <div class="eyebrow" style="color:white;">
+            CONTACTO
+        </div>
+
+        <h2>
+            ¿Tenés un<br>
+            proyecto?
+        </h2>
+    </div>
+
+
+    <div class="contact-links">
+
+        <a href="https://wa.me/543856238794?text=Hola%2C%20quisiera%20realizar%20una%20consulta%20sobre%20un%20proyecto."
+           target="_blank">
+            WhatsApp · +54 385 623-8794
+        </a>
+
+        <a href="mailto:contacto@carolconstrucciones.com.ar">
+            contacto@carolconstrucciones.com.ar
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div>
+        © 2026 Carol Construcciones
+    </div>
+
+    <div>
+        Ingeniería · Proyectos · Construcción
+    </div>
+
+</footer>
+
+
+<a class="whatsapp"
+   href="https://wa.me/543856238794?text=Hola%2C%20quisiera%20realizar%20una%20consulta%20sobre%20un%20proyecto."
+   target="_blank"
+   aria-label="Contactar por WhatsApp">
+    WA
+</a>
 
 </body>
 </html>
