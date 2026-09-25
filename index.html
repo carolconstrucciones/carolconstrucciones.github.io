@@ -326,7 +326,45 @@
             margin-bottom: 18px;
             font-size: 17px;
         }
+/* EQUIPO */
 
+.team {
+    padding-top: 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.team-member img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 15px;
+}
+
+.team-member span {
+    color: #20bdb6;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
         /* CONTACTO */
 
         .contact {
@@ -476,6 +514,13 @@
                 height: 350px;
             }
 
+          .team-grid {
+    grid-template-columns: 1fr;
+}
+
+.team-member img {
+    height: 400px;
+}
             .contact {
                 grid-template-columns: 1fr;
             }
@@ -739,7 +784,45 @@
     </div>
 
 </section>
+<section class="team">
 
+    <div class="section-heading">
+
+        <div class="section-number">05 / NOSOTROS</div>
+
+        <h2>Nuestro equipo.</h2>
+
+        <p>
+            Profesionales que integran Carol Construcciones.
+        </p>
+
+    </div>
+
+    <div class="team-grid">
+
+        <article class="team-member">
+
+            <img src="images/Daniel-Carol.jpg" alt="Ing. Daniel Carol">
+
+            <h3>Ing. Daniel Carol</h3>
+
+            <span>Ingeniero Civil</span>
+
+        </article>
+
+        <article class="team-member">
+
+            <img src="images/Sebastian-Carol.jpg" alt="MMO. Sebastián Carol">
+
+            <h3>MMO. Sebastián Carol</h3>
+
+            <span>Maestro Mayor de Obras</span>
+
+        </article>
+
+    </div>
+
+</section>
 
 <section id="contacto" class="contact">
 
